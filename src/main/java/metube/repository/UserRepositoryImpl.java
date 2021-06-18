@@ -24,7 +24,7 @@ public class UserRepositoryImpl implements UserRepository {
              PreparedStatement preparedStatement = connection.prepareStatement(Query.INSERT_USER)) {
             preparedStatement.setString(1, user.getUsername());
             preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setString(3,user.getEmail());
+            preparedStatement.setString(3, user.getEmail());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             SqlException.printSQLException(e);
@@ -59,20 +59,41 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User findById(Integer id) {
-       User user = null;
+        User user = null;
         try (Connection connection = connector.getConnection();
 
-             PreparedStatement preparedStatement = connection.prepareStatement(Query.SELECT_USER_BY_ID )) {
+             PreparedStatement preparedStatement = connection.prepareStatement(Query.SELECT_USER_BY_ID)) {
             preparedStatement.setInt(1, id);
 
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
-                String username= rs.getString("username");
-                String  password= rs.getString("password");
+                String username = rs.getString("username");
+                String password = rs.getString("password");
                 String email = rs.getString("email");
 
-                user = new User(id,username,password,email);
+                user = new User(id, username, password, email);
+            }
+        } catch (SQLException e) {
+            SqlException.printSQLException(e);
+        }
+        return user;
+    }
+
+    public User findByUsername(String username) {
+        User user = null;
+        try (Connection connection = connector.getConnection();
+
+             PreparedStatement preparedStatement = connection.prepareStatement(Query.SELECT_USER_BY_USERNAME)) {
+            preparedStatement.setString(1, username);
+
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String password = rs.getString("password");
+                String email = rs.getString("email");
+                user = new User(id, username, password, email);
             }
         } catch (SQLException e) {
             SqlException.printSQLException(e);

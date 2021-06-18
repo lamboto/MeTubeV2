@@ -11,6 +11,7 @@ public class Query {
     public static final String SELECT_ALL_TUBES = "select * from tubes";
     public static final String SELECT_TUBE_BY_ID = "select * from tubes where id=?";
 
+    public static final String SELECT_USER_BY_USERNAME = "select * from users where username=?";
     public static final String SELECT_ALL_USERS= "select * from users";
     public static final String SELECT_USER_BY_ID = "select * from users where id=?";
 
