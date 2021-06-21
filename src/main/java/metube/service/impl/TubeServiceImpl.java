@@ -32,4 +32,9 @@ public class TubeServiceImpl implements TubeService {
         return this.tubeRepository.findAllByGivenUsername(username);
     }
 
+    @Override
+    public Tube findById(Integer id) {
+        return this.tubeRepository.findById(id);
+    }
+
 }

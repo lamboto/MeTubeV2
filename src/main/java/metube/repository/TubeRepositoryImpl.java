@@ -81,6 +81,7 @@ public class TubeRepositoryImpl implements TubeRepository {
                 String youtube_id = rs.getString("youtube_id");
                 long views = rs.getLong("views");
 
+
                 tubes.add(new Tube(title, author, description, youtube_id, views));
             }
         } catch (SQLException e) {

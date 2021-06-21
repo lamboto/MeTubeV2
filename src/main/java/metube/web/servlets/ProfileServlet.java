@@ -32,7 +32,9 @@ public class ProfileServlet extends HttpServlet {
                 .map(tube -> this.mapper.map(tube, UserTubeViewModel.class))
                 .collect(Collectors.toList());
 
-        req.setAttribute("viewModel",tubes);
+        req.setAttribute("viewModel", null);
+        req.setAttribute("viewModel", tubes);
+
 
         req.getRequestDispatcher("profile.jsp").forward(req, resp);
     }

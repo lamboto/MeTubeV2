@@ -9,14 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="Add tubes">
+    <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="View tubes for user in the session.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/views/TubeDetailsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeDetailServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6fea452-0ec3-4a0c-9493-befea2560d26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6fea452-0ec3-4a0c-9493-befea2560d26.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/entities/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/entities/Tube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/views/TubeViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/views/UserTubeViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +79,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.46" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.46" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -199,7 +211,7 @@
       <workItem from="1624271395867" duration="1113000" />
       <workItem from="1624272586509" duration="3494000" />
       <workItem from="1624276180956" duration="1180000" />
-      <workItem from="1624277556098" duration="4364000" />
+      <workItem from="1624277556098" duration="7293000" />
     </task>
     <task id="LOCAL-00001" summary="Generic custom repository">
       <created>1623936246625</created>
@@ -236,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624279515771</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="View tubes for user in the session.">
+      <created>1624282649188</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624282649188</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +278,8 @@
     <MESSAGE value="Register Login" />
     <MESSAGE value="Register Login Logout model maps for all layers" />
     <MESSAGE value="Add tubes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tubes" />
+    <MESSAGE value="View tubes for user in the session." />
+    <option name="LAST_COMMIT_MESSAGE" value="View tubes for user in the session." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

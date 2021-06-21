@@ -1,23 +1,13 @@
-package metube.domain.model;
+package metube.domain.views;
 
-public class TubeCreateServiceModel {
-    private int id;
+public class TubeDetailsViewModel {
     private String title;
     private String author;
     private String description;
     private String youtubeId;
     private long views;
-    private int userId;
 
-    public TubeCreateServiceModel() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public TubeDetailsViewModel() {
     }
 
     public String getTitle() {
@@ -58,13 +48,5 @@ public class TubeCreateServiceModel {
 
     public void setViews(long views) {
         this.views = views;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 }
