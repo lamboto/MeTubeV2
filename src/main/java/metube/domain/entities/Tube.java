@@ -13,6 +13,12 @@ public class Tube {
     public Tube() {
     }
 
+    public Tube(int id, String title, String author) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+    }
+
     public Tube(String title, String author, String description, String youtubeId, long views, int userId) {
         this.title = title;
         this.author = author;

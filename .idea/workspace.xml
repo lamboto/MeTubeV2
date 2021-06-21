@@ -9,27 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="Register Login Logout model maps for all layers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/TubeCreateServiceModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/TubeServiceModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/views/TubeViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/service/TubeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/service/impl/TubeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeCreateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/upload.jsp" afterDir="false" />
+    <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="Add tubes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/entities/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/entities/Tube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/model/UserLoginServiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/UserLoginServiceModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/views/TubeViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/views/UserTubeViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +199,7 @@
       <workItem from="1624271395867" duration="1113000" />
       <workItem from="1624272586509" duration="3494000" />
       <workItem from="1624276180956" duration="1180000" />
-      <workItem from="1624277556098" duration="1900000" />
+      <workItem from="1624277556098" duration="4364000" />
     </task>
     <task id="LOCAL-00001" summary="Generic custom repository">
       <created>1623936246625</created>
@@ -242,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624260539158</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add tubes">
+      <created>1624279515770</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624279515771</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +258,8 @@
     <MESSAGE value="Generic custom repository" />
     <MESSAGE value="Register Login" />
     <MESSAGE value="Register Login Logout model maps for all layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register Login Logout model maps for all layers" />
+    <MESSAGE value="Add tubes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tubes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -273,11 +268,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/metube/repository/UserRepositoryImpl.java</url>
           <line>27</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

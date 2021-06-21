@@ -41,7 +41,7 @@ public class TubeRepositoryImpl implements TubeRepository {
         List<Tube> tubes = new ArrayList<>();
 
         try (Connection connection = this.connector.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(Query.SELECT_USER_BY_USERNAME)) {
+             PreparedStatement preparedStatement = connection.prepareStatement(Query.SELECT_ALL_TUBES_BY_USER_USERNAME)) {
 
             preparedStatement.setString(1, username);
 
@@ -49,13 +49,11 @@ public class TubeRepositoryImpl implements TubeRepository {
 
 
             while (rs.next()) {
+                int id = rs.getInt("id");
                 String title = rs.getString("title");
                 String author = rs.getString("author");
-                String description = rs.getString("description");
-                String youtube_id = rs.getString("youtube_id");
-                long views = rs.getLong("views");
 
-                tubes.add(new Tube(title, author, description, youtube_id, views));
+                tubes.add(new Tube(id,title, author));
             }
         } catch (SQLException e) {
             SqlException.printSQLException(e);

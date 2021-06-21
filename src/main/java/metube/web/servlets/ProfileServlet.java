@@ -2,9 +2,8 @@ package metube.web.servlets;
 
 import metube.config.Mapper;
 import metube.domain.entities.User;
-import metube.domain.views.TubeViewModel;
+import metube.domain.views.UserTubeViewModel;
 import metube.service.impl.TubeServiceImpl;
-import metube.service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,9 +27,9 @@ public class ProfileServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
         String username = user.getUsername();
 
-        List<TubeViewModel> tubes = this.tubeService.getAllByGivenUsername(username)
+        List<UserTubeViewModel> tubes = this.tubeService.getAllByGivenUsername(username)
                 .stream()
-                .map(tube -> this.mapper.map(tube, TubeViewModel.class))
+                .map(tube -> this.mapper.map(tube, UserTubeViewModel.class))
                 .collect(Collectors.toList());
 
         req.setAttribute("viewModel",tubes);

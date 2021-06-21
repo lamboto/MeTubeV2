@@ -1,4 +1,5 @@
-<%--
+<%@ page import="metube.domain.views.UserTubeViewModel" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: t_lamburov
   Date: 21.6.2021 г.
@@ -24,7 +25,9 @@
             <h4 class="text-info text-center">(${user.getEmail()})</h4>
         </div>
         <hr>
-        <div class="container-fluid">
+
+        <div
+                class="container-fluid">
             <div class="row d-flex flex-column">
                 <table class="table table-hover table-dark">
                     <thead>
@@ -35,11 +38,22 @@
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
-                    <c:forEach items="${viewModel}" var="u">
-                        <tbody>
-                            ${u.get}
-                        </tbody>
-                    </c:forEach>
+
+                    <%
+                        int i = 1;
+                        for (UserTubeViewModel model : ((List<UserTubeViewModel>) request.getAttribute("viewModel"))) {%>
+                    <tbody>
+                    <tr>
+                        <td><%=i++ %>
+                        </td>
+                        <td><%=model.getTitle()%>
+                        </td>
+                        <td><%=model.getAuthor()%>
+                        </td>
+                        <td><a href="/tube/details/<%=model.getId()%>">Details</a></td>
+                    </tr>
+                    </tbody>
+                    <% } %>
                 </table>
             </div>
         </div>
