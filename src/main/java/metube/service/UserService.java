@@ -1,10 +1,10 @@
 package metube.service;
 
-import metube.domain.entities.User;
-import metube.domain.model.UserServiceModel;
+import metube.domain.model.UserCreateServiceModel;
+import metube.domain.model.UserLoginServiceModel;
 
 public interface UserService {
     void register(String username,String email,String password,String confirmPassword);
 
-    User login(String username, String password);
+        UserLoginServiceModel login(String username, String password);
 }

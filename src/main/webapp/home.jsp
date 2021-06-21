@@ -19,13 +19,14 @@
   <main>
     <hr class="my-2"/>
     <div class="text-center mt-3">
-      <h4 class="h4 text-info">Welcome, ${username}</h4>
+      <h4 class="h4 text-info">Welcome, ${user.getUsername()}</h4>
     </div>
     <hr class="my-4">
     <div class="container">
       ${allTubes}
     </div>
     <hr class="my-3"/>
+  </main>
   <footer>
     <c:import url="footer.jsp"/>
   </footer>

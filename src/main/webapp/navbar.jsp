@@ -17,6 +17,7 @@
 
     <div class="collapse navbar-collapse justify-content-end row" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+            <% if (request.getSession().getAttribute("user") == null) { %>
             <li class="nav-item active col-md-4">
                 <a class="nav-link h5" href="/">Home</a>
             </li>
@@ -26,6 +27,20 @@
             <li class="nav-item active col-md-4">
                 <a class="nav-link h5" href="/users/register">Register</a>
             </li>
+            <% } else {%>
+            <li class="nav-item active col-md-3">
+                <a class="nav-link h5" href="/">Home</a>
+            </li>
+            <li class="nav-item active col-md-3">
+                <a class="nav-link h5" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item active col-md-3">
+                <a class="nav-link h5" href="/upload-tube">Upload</a>
+            </li>
+            <li class="nav-item active col-md-3">
+                <a class="nav-link h5" href="/logout">Logout</a>
+            </li>
+            <% } %>
         </ul>
     </div>
 </nav>

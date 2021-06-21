@@ -2,11 +2,10 @@ package metube.service.impl;
 
 import metube.config.Mapper;
 import metube.domain.entities.User;
-import metube.domain.model.UserServiceModel;
-import metube.repository.UserRepository;
+import metube.domain.model.UserCreateServiceModel;
+import metube.domain.model.UserLoginServiceModel;
 import metube.repository.UserRepositoryImpl;
 import metube.service.UserService;
-import org.apache.commons.codec.digest.DigestUtils;
 
 public class UserServiceImpl implements UserService {
 
@@ -15,24 +14,24 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void register(String username, String email, String password, String confirmPassword) {
-        UserServiceModel userServiceModel = new UserServiceModel();
+        UserCreateServiceModel userCreateServiceModel = new UserCreateServiceModel();
 
-        userServiceModel.setUsername(username);
-        userServiceModel.setEmail(email);
-        userServiceModel.setPassword(password);
-        this.userRepository.save(mapper.map(userServiceModel,User.class));
+        userCreateServiceModel.setUsername(username);
+        userCreateServiceModel.setEmail(email);
+        userCreateServiceModel.setPassword(password);
+        this.userRepository.save(mapper.map(userCreateServiceModel, User.class));
     }
 
     @Override
-    public User login(String username, String password) {
+    public UserLoginServiceModel login(String username, String password) {
         User user = this.userRepository.findByUsername(username);
-        if (user==null){
+        if (user == null) {
             return null;
         }
 
-        if (!user.getPassword().equals(password)){
-         return null;
+        if (!user.getPassword().equals(password)) {
+            return null;
         }
-        return user;
+        return this.mapper.map(user, UserLoginServiceModel.class);
     }
 }

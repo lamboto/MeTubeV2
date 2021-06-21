@@ -1,13 +1,13 @@
 package metube.domain.model;
 
-public class UserServiceModel {
+public class UserCreateServiceModel {
 
     private int id;
     private String username;
     private String password;
     private String email;
 
-    public UserServiceModel() {
+    public UserCreateServiceModel() {
     }
 
     public int getId() {

@@ -1,14 +1,8 @@
 package metube.web.servlets;
 
 import metube.config.Mapper;
-import metube.domain.binding.UserRegisterBindingModel;
-import metube.domain.entities.User;
-import metube.domain.model.UserServiceModel;
-import metube.service.UserService;
 import metube.service.impl.UserServiceImpl;
-import org.modelmapper.ModelMapper;
 
-import javax.enterprise.inject.Model;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +18,7 @@ public class UserRegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("register.jsp")
+        req.getRequestDispatcher("/register.jsp")
                 .forward(req, resp);
     }
 
