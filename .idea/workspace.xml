@@ -9,20 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="Register Login">
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/LogoutServlet.java" afterDir="false" />
+    <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="Register Login Logout model maps for all layers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/TubeCreateServiceModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/TubeServiceModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/views/TubeViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/service/TubeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/service/impl/TubeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeCreateServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/upload.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/entities/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/entities/Tube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/model/UserLoginServiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/UserLoginServiceModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/domain/model/UserServiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/domain/model/UserCreateServiceModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/UserRegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/UserRegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +40,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="cdi.beans_2_0" />
-        <option value="Interface" />
         <option value="jsf" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -192,6 +199,20 @@
       <workItem from="1624018621143" duration="38000" />
       <workItem from="1624018690904" duration="7583000" />
       <workItem from="1624258645807" duration="1579000" />
+      <workItem from="1624260312167" duration="794000" />
+      <workItem from="1624261359043" duration="188000" />
+      <workItem from="1624261695279" duration="280000" />
+      <workItem from="1624262270176" duration="200000" />
+      <workItem from="1624262509678" duration="7000" />
+      <workItem from="1624262555854" duration="771000" />
+      <workItem from="1624263489221" duration="472000" />
+      <workItem from="1624263977913" duration="1409000" />
+      <workItem from="1624265406554" duration="284000" />
+      <workItem from="1624265696342" duration="3743000" />
+      <workItem from="1624271395867" duration="1113000" />
+      <workItem from="1624272586509" duration="3494000" />
+      <workItem from="1624276180956" duration="1180000" />
+      <workItem from="1624277556098" duration="1900000" />
     </task>
     <task id="LOCAL-00001" summary="Generic custom repository">
       <created>1623936246625</created>
@@ -214,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624023828476</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Register Login Logout model maps for all layers">
+      <created>1624260539157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624260539158</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +263,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Generic custom repository" />
     <MESSAGE value="Register Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register Login" />
+    <MESSAGE value="Register Login Logout model maps for all layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register Login Logout model maps for all layers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,6 +273,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/metube/repository/UserRepositoryImpl.java</url>
           <line>27</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

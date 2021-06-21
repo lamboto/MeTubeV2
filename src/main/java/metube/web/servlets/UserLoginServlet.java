@@ -1,5 +1,6 @@
 package metube.web.servlets;
 
+import metube.domain.entities.User;
 import metube.domain.model.UserCreateServiceModel;
 import metube.domain.model.UserLoginServiceModel;
 import metube.service.impl.UserServiceImpl;
@@ -28,7 +29,7 @@ public class UserLoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        UserLoginServiceModel user = this.userService.login(username, password);
+        User user = this.userService.login(username, password);
 
         if (user == null) {
             resp.sendRedirect("/users/login");

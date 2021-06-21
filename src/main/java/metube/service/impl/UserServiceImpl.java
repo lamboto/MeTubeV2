@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserLoginServiceModel login(String username, String password) {
+    public User login(String username, String password) {
         User user = this.userRepository.findByUsername(username);
         if (user == null) {
             return null;
@@ -32,6 +32,10 @@ public class UserServiceImpl implements UserService {
         if (!user.getPassword().equals(password)) {
             return null;
         }
-        return this.mapper.map(user, UserLoginServiceModel.class);
+        return user;
+    }
+
+    public void getByUsername(String username) {
+        this.userRepository.findByUsername(username);
     }
 }

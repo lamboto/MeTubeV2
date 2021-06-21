@@ -10,12 +10,32 @@ public class Tube {
     private long views;
     private int userId;
 
+    public Tube() {
+    }
+
+    public Tube(String title, String author, String description, String youtubeId, long views, int userId) {
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.youtubeId = youtubeId;
+        this.views = views;
+        this.userId = userId;
+    }
+
     public Tube(String title, String author, String description, String youtubeId, long views) {
         this.title = title;
         this.author = author;
         this.description = description;
         this.youtubeId = youtubeId;
         this.views = views;
+    }
+
+    public Tube(String title, String author, String description, String youtubeId, int userId) {
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.youtubeId = youtubeId;
+        this.userId = userId;
     }
 
     public Tube(int id, String title, String author, String description, String youtubeId, long views) {
@@ -82,4 +102,5 @@ public class Tube {
     public void setUserId(int userId) {
         this.userId = userId;
     }
+
 }
