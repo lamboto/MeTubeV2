@@ -14,4 +14,6 @@ public interface TubeService {
     TubeServiceModel findById(Integer id);
 
     TubeServiceModel getTubeDetail(int tubeId);
+
+    List<TubeServiceModel> getAllTubes();
 }

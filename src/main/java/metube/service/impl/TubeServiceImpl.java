@@ -8,6 +8,7 @@ import metube.repository.TubeRepositoryImpl;
 import metube.service.TubeService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TubeServiceImpl implements TubeService {
 
@@ -47,10 +48,18 @@ public class TubeServiceImpl implements TubeService {
     public TubeServiceModel getTubeDetail(int tubeId) {
         TubeServiceModel tube = findById(tubeId);
 
-        tube.setViews(tube.getViews() + 1);
 
         this.tubeRepository.update(mapper.map(tube, Tube.class));
         return findById(tubeId);
+    }
+
+    @Override
+    public List<TubeServiceModel> getAllTubes() {
+        List<Tube> tubes = this.tubeRepository.findAll();
+
+
+        return tubes.stream().map(tube -> this.mapper.map(tube, TubeServiceModel.class))
+                .collect(Collectors.toList());
     }
 
 }
