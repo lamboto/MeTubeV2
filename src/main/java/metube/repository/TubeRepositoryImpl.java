@@ -37,6 +37,17 @@ public class TubeRepositoryImpl implements TubeRepository {
     }
 
     @Override
+    public void update(Tube tube) {
+        try (Connection connection = connector.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(Query.UPDATE_TUBE_VIEWS)) {
+            preparedStatement.setInt(1, tube.getId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            SqlException.printSQLException(e);
+        }
+    }
+
+    @Override
     public List<TubeServiceModel> findAllByGivenUsername(String username) {
         List<Tube> tubes = new ArrayList<>();
 
@@ -53,7 +64,7 @@ public class TubeRepositoryImpl implements TubeRepository {
                 String title = rs.getString("title");
                 String author = rs.getString("author");
 
-                tubes.add(new Tube(id,title, author));
+                tubes.add(new Tube(id, title, author));
             }
         } catch (SQLException e) {
             SqlException.printSQLException(e);

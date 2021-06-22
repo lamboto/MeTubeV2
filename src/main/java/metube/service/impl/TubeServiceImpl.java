@@ -21,7 +21,7 @@ public class TubeServiceImpl implements TubeService {
         tube.setTitle(title);
         tube.setAuthor(author);
         tube.setDescription(description);
-        tube.setYoutubeId(youtubeId);
+        tube.setYoutubeId(youtubeId.split("=")[1]);
         tube.setUserId(userId);
 
         this.tubeRepository.save(this.mapper.map(tube, Tube.class));
@@ -33,8 +33,24 @@ public class TubeServiceImpl implements TubeService {
     }
 
     @Override
-    public Tube findById(Integer id) {
-        return this.tubeRepository.findById(id);
+    public TubeServiceModel findById(Integer id) {
+        Tube tube = this.tubeRepository.findById(id);
+
+        if (tube == null) {
+            throw new IllegalArgumentException();
+        }
+
+        return this.mapper.map(tube, TubeServiceModel.class);
+    }
+
+    @Override
+    public TubeServiceModel getTubeDetail(int tubeId) {
+        TubeServiceModel tube = findById(tubeId);
+
+        tube.setViews(tube.getViews() + 1);
+
+        this.tubeRepository.update(mapper.map(tube, Tube.class));
+        return findById(tubeId);
     }
 
 }

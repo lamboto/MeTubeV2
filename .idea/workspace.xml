@@ -10,12 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7500baa8-b532-43f0-88aa-a737833a9e0e" name="Default Changelist" comment="View tubes for user in the session.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/domain/views/TubeDetailsViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeDetailServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6fea452-0ec3-4a0c-9493-befea2560d26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6fea452-0ec3-4a0c-9493-befea2560d26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/query/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/GenericRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/TubeRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/ProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/service/TubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/service/TubeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/service/impl/TubeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/service/impl/TubeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeDetailServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +31,9 @@
       <list>
         <option value="cdi.beans_2_0" />
         <option value="jsf" />
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -211,7 +215,7 @@
       <workItem from="1624271395867" duration="1113000" />
       <workItem from="1624272586509" duration="3494000" />
       <workItem from="1624276180956" duration="1180000" />
-      <workItem from="1624277556098" duration="7293000" />
+      <workItem from="1624277556098" duration="15189000" />
     </task>
     <task id="LOCAL-00001" summary="Generic custom repository">
       <created>1623936246625</created>
@@ -255,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624282649188</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="View tubes for user in the session.">
+      <created>1624285592573</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624285592573</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +300,22 @@
           <line>27</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeDetailServlet.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/metube/web/servlets/TubeDetailServlet.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="tubeServiceModel" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

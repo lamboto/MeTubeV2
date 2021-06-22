@@ -11,5 +11,7 @@ public interface TubeService {
 
     List<TubeServiceModel> getAllByGivenUsername(String username);
 
-    Tube findById(Integer id);
+    TubeServiceModel findById(Integer id);
+
+    TubeServiceModel getTubeDetail(int tubeId);
 }

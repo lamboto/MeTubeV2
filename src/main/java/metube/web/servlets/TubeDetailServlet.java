@@ -1,7 +1,9 @@
 package metube.web.servlets;
 
+import metube.config.Mapper;
 import metube.domain.entities.Tube;
 import metube.domain.model.TubeServiceModel;
+import metube.domain.views.TubeDetailsViewModel;
 import metube.service.impl.TubeServiceImpl;
 
 import javax.servlet.ServletException;
@@ -15,13 +17,21 @@ import java.io.IOException;
 public class TubeDetailServlet extends HttpServlet {
 
     private final TubeServiceImpl tubeService = new TubeServiceImpl();
+    private final Mapper mapper = new Mapper();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String[] urlParams = req.getRequestURI().split("/");
-        String tubeId = urlParams[urlParams.length - 1];
+        int tubeId = Integer.parseInt(urlParams[urlParams.length - 1]);
+
+        TubeServiceModel tubeServiceModel = this.tubeService.getTubeDetail(tubeId);
 
 
-        super.doGet(req, resp);
+        TubeDetailsViewModel tubeDetailsViewModel = this.mapper.map(tubeServiceModel, TubeDetailsViewModel.class);
+
+
+        req.setAttribute("model", tubeDetailsViewModel);
+        req.getRequestDispatcher("/details.jsp").forward(req, resp);
     }
+
 }

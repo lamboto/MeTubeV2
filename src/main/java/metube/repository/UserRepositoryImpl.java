@@ -33,6 +33,11 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
+    public void update(User entity) {
+
+    }
+
+    @Override
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
 

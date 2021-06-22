@@ -6,6 +6,8 @@ public interface GenericRepository<E,ID>{
 
     void save(E entity);
 
+    void update(E entity);
+
     List<E> findAll();
 
     E findById(ID id);
